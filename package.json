@@ -1,0 +1,27 @@
+{
+  "name": "eventemitter3-lifetime",
+  "version": "1.0.0",
+  "description": "Allows adding lifetimes to your event listeners to avoid memory leaks.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenjelfs/eventemitter3-lifetime.git"
+  },
+  "keywords": [
+    "eventemitter",
+    "events",
+    "listeners",
+    "lifetime",
+    "life",
+    "memory-leaks"
+  ],
+  "author": "Stephen Jelfs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stephenjelfs/eventemitter3-lifetime/issues"
+  },
+  "homepage": "https://github.com/stephenjelfs/eventemitter3-lifetime#readme"
+}
