@@ -1,10 +1,18 @@
 {
   "name": "eventemitter3-lifetime",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Allows adding lifetimes to your event listeners to avoid memory leaks.",
   "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist/",
+    "typings.json"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "tslint 'src/**/*.ts'",
+    "build": "rimraf dist/ && tsc",
+    "test": "npm run lint && npm run build ",
+    "prepublish": "typings install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -23,5 +31,14 @@
   "bugs": {
     "url": "https://github.com/stephenjelfs/eventemitter3-lifetime/issues"
   },
-  "homepage": "https://github.com/stephenjelfs/eventemitter3-lifetime#readme"
+  "homepage": "https://github.com/stephenjelfs/eventemitter3-lifetime#readme",
+  "dependencies": {
+    "eventemitter3": "^1.2.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.5.2",
+    "tslint": "^3.8.1",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1"
+  }
 }
