@@ -11,9 +11,9 @@
   "scripts": {
     "lint": "tslint 'src/**/*.ts'",
     "build": "rimraf build/ && tsc",
-    "build-test": "npm run build && npm run lint && jasmine-ts src/**/*.spec.ts",
-    "build-test-dist": "npm run build-test && rimraf dist/ && copyfiles -u 1 'build/!(*.spec.*)' dist",
-    "prepublish": "typings install && npm run build-test-dist"
+    "test": "npm run build && npm run lint && jasmine-ts src/**/*.spec.ts",
+    "dist": "npm run test && rimraf dist/ && copyfiles -u 1 'build/!(*.spec.*)' dist",
+    "prepublish": "typings install && npm run dist"
   },
   "repository": {
     "type": "git",
