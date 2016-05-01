@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stephenjelfs/eventemitter3-lifetime.git"
+    "url": "git+https://github.com/stephenjelfs/lifetime.git"
   },
   "keywords": [
     "eventemitter",
@@ -30,9 +30,9 @@
   "author": "Stephen Jelfs",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stephenjelfs/eventemitter3-lifetime/issues"
+    "url": "https://github.com/stephenjelfs/lifetime/issues"
   },
-  "homepage": "https://github.com/stephenjelfs/eventemitter3-lifetime#readme",
+  "homepage": "https://github.com/stephenjelfs/lifetime#readme",
   "dependencies": {
     "eventemitter3": "^1.2.0"
   },
