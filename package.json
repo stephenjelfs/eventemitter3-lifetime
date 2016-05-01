@@ -1,6 +1,6 @@
 {
   "name": "lifetime",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Allows adding lifetimes to your event listeners to avoid memory leaks.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -11,9 +11,9 @@
   "scripts": {
     "lint": "tslint 'src/**/*.ts'",
     "build": "rimraf build/ && tsc",
-    "dist": "npm run build && rimraf dist/ && copyfiles -u 1 'build/!(*.spec.*)' dist",
-    "test": "npm run lint && npm run build && jasmine-ts src/**/*.spec.ts",
-    "prepublish": "typings install && npm run dist"
+    "build-test": "npm run build && npm run lint && jasmine-ts src/**/*.spec.ts",
+    "build-test-dist": "npm run build-test && rimraf dist/ && copyfiles -u 1 'build/!(*.spec.*)' dist",
+    "prepublish": "typings install && npm run build-test-dist"
   },
   "repository": {
     "type": "git",
