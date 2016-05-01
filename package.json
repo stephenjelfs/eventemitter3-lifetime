@@ -1,6 +1,6 @@
 {
   "name": "lifetime",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Allows adding lifetimes to your event listeners to avoid memory leaks.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
