@@ -1,2 +1,2 @@
-export * from './Lifetime';
-export * from './EventEmitterWithLife';
+export * from "./Lifetime";
+export * from "./EventEmitterWithLife";

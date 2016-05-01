@@ -1,6 +1,6 @@
 {
-  "name": "eventemitter3-lifetime",
-  "version": "1.0.1",
+  "name": "lifetime",
+  "version": "0.0.1",
   "description": "Allows adding lifetimes to your event listeners to avoid memory leaks.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -10,9 +10,10 @@
   ],
   "scripts": {
     "lint": "tslint 'src/**/*.ts'",
-    "build": "rimraf dist/ && tsc",
-    "test": "npm run lint && npm run build ",
-    "prepublish": "typings install && npm run build"
+    "build": "rimraf build/ && tsc",
+    "dist": "npm run build && rimraf dist/ && copyfiles -u 1 'build/!(*.spec.*)' dist",
+    "test": "npm run lint && npm run build && jasmine-ts src/**/*.spec.ts",
+    "prepublish": "typings install && npm run dist"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,9 @@
     "eventemitter3": "^1.2.0"
   },
   "devDependencies": {
+    "copyfiles": "^0.2.1",
+    "jasmine": "^2.4.1",
+    "jasmine-ts": "0.0.1",
     "rimraf": "^2.5.2",
     "tslint": "^3.8.1",
     "typescript": "^1.8.10",
